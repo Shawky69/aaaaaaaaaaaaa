@@ -11,8 +11,6 @@ import (
 func claimer(token string) {
 	var session *Session = socketConnection(token)
 
-	defer session.Close(context.TODO())
-
 	var connectionError error = session.Connect(context.TODO())
 	_ = connectionError
 
